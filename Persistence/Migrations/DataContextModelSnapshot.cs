@@ -43,6 +43,11 @@ namespace Persistence.Migrations
                         {
                             Id = 3,
                             Name = "waller"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Name = "Daniel"
                         });
                 });
 #pragma warning restore 612, 618

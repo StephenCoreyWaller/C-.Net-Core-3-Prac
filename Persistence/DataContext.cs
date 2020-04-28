@@ -18,10 +18,8 @@ namespace Persistence
 
                 new Value {Id = 1, Name = "stephen"},
                 new Value {Id = 2, Name = "corey"},
-                new Value {Id = 3, Name = "waller"}
-            );
-
-            
-        }
+                new Value {Id = 3, Name = "waller"},
+                new Value {Id = 4, Name = "Daniel"}
+            );}
     }
 }
