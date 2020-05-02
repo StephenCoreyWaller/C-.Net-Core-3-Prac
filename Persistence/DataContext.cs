@@ -12,6 +12,10 @@ namespace Persistence
         }
         public DbSet<Value> Value { get; set; }
 
+        public DbSet<Activity> Activities { get; set; }
+
+        public DbSet<Test> Tester {get; set; }
+
         protected override void OnModelCreating(ModelBuilder builder){
 
             builder.Entity<Value>().HasData(
