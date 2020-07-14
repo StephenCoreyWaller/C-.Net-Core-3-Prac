@@ -6,9 +6,10 @@ import "../App/layout/styles.css";
 interface IProp {
   activity: IActivity;
   selectActivity: (id: string) => void;
+  deleteActivity: (id: string) => void; 
 }
 
-const ActivityList: React.FC<IProp> = ({ activity, selectActivity }) => {
+const ActivityList: React.FC<IProp> = ({ activity, selectActivity, deleteActivity }) => {
   return (
     <Segment clearing>
       <Item.Group divided>
@@ -24,8 +25,9 @@ const ActivityList: React.FC<IProp> = ({ activity, selectActivity }) => {
               <div>{activity.description}</div>
               <div style={{marginBottom: '1px'}}>{activity.city}, {activity.venue}</div>
             </Item.Description>
-            <Item.Extra>
-              <Button onClick={() => selectActivity(activity.id)} floated='right' content='view' color='blue'></Button>
+            <Item.Extra>    
+              <Button onClick={() => selectActivity(activity.id)} floated='right' content='View' color='blue'></Button>
+              <Button onClick={() => deleteActivity(activity.id)} floated='right' content='Delete' color='red'></Button>
               <Label basic content={activity.category}></Label>
             </Item.Extra>
           </Item.Content>
